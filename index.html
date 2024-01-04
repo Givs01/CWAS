@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Public Opinion - Pre-Budget Consultation -</title>
+  
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+	  
+  <link 
+  rel="stylesheet" 
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+  />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 5px;
+      text-align: left;
+    }
+
+    h1 {
+      color: #333;
+	  font-size: 8px;
+	  text-align: center;
+    }
+	
+	h3 {
+      color: #333;
+	  text-align: center;
+    }
+
+
+	h4 {
+      color: #ccc;
+	  font-size: 8px;
+	  text-align: center;
+    }
+	
+	
+    label {
+      display: block;
+	  background-color: #FBFCFC;
+      margin: 10px;
+    }
+
+    input[type="checkbox"] {
+      display: none;
+	   margin-left: 10px;
+    }
+
+    .option {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+	  background-color: #FBFCFC;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 15px;
+    }
+
+    .icon {
+      margin-right: 20px;
+      font-size: 24px;
+    }
+
+    .text {
+      font-size: 18px;
+    }
+
+    .option:hover {
+      background-color: #e6e6e6;
+    }
+
+
+    input[type="checkbox"]:checked + .option {
+      background-color: #00D1B2; /* Green background for selected option */
+      color: #fff; /* White text for better visibility */
+	  margin-left: 10px;
+    }
+
+    #slider-container {
+      margin: 10px;
+    }
+
+
+    #rating-value {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    #popup {
+      display: none;
+	  position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 40px;
+      background-color: #bda9a8;
+      z-index: 1000;
+      align-items: center;
+	  text-align: center;
+      border: 1px solid #ccc;
+      border-radius: 15px;
+    }
+
+    #overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+	
+	  ::placeholder {
+      color: #999; /* Change the color as desired */
+      font-style: italic; /* Add any desired font styles */
+	  word-wrap: break-word;  
+    }
+	
+	
+  </style>
+  </head>
+  <body>
+    <section class="hero is-primary is-bold">
+      <div class="hero-body">
+        <div class="container">
+         <h1 class="title">Kulgaon Badlapur Municipal Council <br> कुळगाव बदलापूर नगरपरिषद </h1>
+		 <h3 class="label">Pre-Budget Consultation <br> बजेटपूर्व सल्लामसलत </h3>
+		  
+        </div>
+      </div>
+    </section>
+    <form id="form" class="container m-4 pl-4" method="POST">
+     
+      <div class="field">
+        <label class="label">1. लिंग  [ Gender ]</label>
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="Gender" value="male" /> Male ( पुरुष )
+          </label>
+		  <br>
+          <label class="radio">
+            <input type="radio" name="Gender" value="female" /> Female ( स्त्री )
+          </label>
+		  <br>
+		  <label class="radio">
+            <input type="radio" name="Gender" value="others" /> Others ( इतर )
+          </label>
+        </div>
+      </div>
+	  <br>
+	  
+	  	 <div class="field">
+        <label class="label">2. वय  [  Age ] </label>
+        <div class="control">
+          <input
+            class="input"
+            type="number"
+            placeholder="कृपया फक्त वर्षे वापरून तुमचे वय टाइप करा  ( Please enter your age using years only)"
+            name="Age"
+          />
+        </div>
+      </div>
+ <br>
+	  
+	 <div class="field">
+        <label class="label">3. निवासी वार्ड क्रमांक  <br> Residential ward number  </label>
+        <div class="control">
+          <input
+            class="input"
+            type="number"
+            placeholder="कृपया तुमचा प्रभाग क्रमांक टाका  ( Please enter your ward number )"
+            name="WardNo"
+          />
+        </div>
+      </div>
+ <br>
+	  
+	  
+      <div class="field">
+        <label class="label">4. कृपया तुमच्या शहरासाठी तुम्हाला हवे असलेले प्राधान्यक्रमानुसार कोणतेही 3 प्रकल्प निवडा <br> Please select any 3 projects based on priority that you want for your city</label>
+
+    <label>
+      <input type="checkbox" name="Projects2" class="Projects" value="Individual Household toilets">
+      <div class="option">
+        <span class="icon"><i class="fas fa-toilet"></i></span>
+        <span class="text">वैयक्तिक घरगुती शौचालये <br> Individual household toilet  </span>
+      </div>
+    </label>
+
+	<label>
+      <input type="checkbox" name="Projects6" class="Projects" value="Local market">
+      <div class="option">
+        <span class="icon"><i class="fas fa-store"></i></span>
+        <span class="text"> स्थानिक बाजार <br>Local Market </span>
+      </div>
+    </label>
+	
+		<label>
+      <input type="checkbox" name="Projects9" class="Projects" value="Storm water drain">
+      <div class="option">
+        <span class="icon"><i class="fas fa-circle"></i></span>
+        <span class="text"> पावसाळी पाणी निचरा <br> Storm Water Drain </span>
+      </div>
+    </label>
+	
+		<label>
+      <input type="checkbox" name="Projects5" class="Projects" value="Roads and footpath">
+      <div class="option">
+        <span class="icon"><i class="fas fa-road"></i></span>
+        <span class="text"> रस्ते आणि पदपथ <br>Road and Footpath </span>
+      </div>
+    </label>
+	
+		<label>
+      <input type="checkbox" name="Projects10" class="Projects" value="Recreational activities">
+      <div class="option">
+        <span class="icon"><i class="fas fa-tree"></i></span>
+        <span class="text"> मनोरंजक उपक्रम <br>Recreational activities </span>
+      </div>
+    </label>
+		 
+    <label>
+      <input type="checkbox" name="Projects3" class="Projects" value="Solid waste management">
+      <div class="option">
+        <span class="icon"><i class="fas fa-trash"></i></span>
+        <span class="text"> घनकचरा व्यवस्थापन <br>Solid waste management </span>
+      </div>
+    </label>
+
+	 
+	<label>
+      <input type="checkbox" name="Projects4" class="Projects" value="Better Public Transport">
+      <div class="option">
+        <span class="icon"><i class="fas fa-bus"></i></span>
+        <span class="text"> उत्तम सार्वजनिक वाहतूक  <br>Better Public Transport  </span>
+      </div>
+    </label>
+	
+	 
+		 
+	<label>
+      <input type="checkbox" name="Projects7" class="Projects" value="School">
+      <div class="option">
+        <span class="icon"><i class="fas fa-school"></i></span>
+        <span class="text"> शाळा आणि त्याची दुरुस्ती  <br>School and its repair and maintenance</span>
+      </div>
+    </label>
+	
+		 
+	<label>
+      <input type="checkbox" name="Projects8" class="Projects" value="Street Light">
+      <div class="option">
+        <span class="icon"><i class="fas fa-lightbulb"></i></span>
+        <span class="text"> स्‍ट्रीट लाईट <br>Street Light </span>
+      </div>
+    </label>
+	
+		<label>
+      <input type="checkbox" name="Projects1" class="Projects" value="Open Space">
+      <div class="option">
+        <span class="icon"><i class="fas fa-street-view"></i></span>
+        <span class="text"> ओपन स्पेस आणि ग्रीन स्पेसचा विकास  <br>Open spaces and green spaces development</span>
+      </div>
+    </label>	 
+
+	</div>
+			 
+ <br>
+
+	 
+		<div class="field">
+			<label class="label">5.  तुमच्या पहिल्या प्राथमिकत्यासाठी प्रकल्प निवडा   <br> Please select your first priority?</label>
+			<div id="priority-options" >
+			</div>
+    	  
+			<label class="label">ठिकाण [Location ] </label>
+			<div class="control">
+			<input
+            class="input"
+            type="text"
+            placeholder="ठिकाण इनपुट करा (Input location )"
+            name="PriorityLocation1"
+			/>
+		  
+		   </div>
+		</div>
+ <br>
+
+
+ 
+       <div class="field">
+        <label class="label">6. तुमच्या दुसऱ्या प्राथमिकत्यासाठी प्रकल्प निवडा <br> Please select your second	 priority?</label>
+			<div id="second-priority-options">
+		
+			</div>
+				<label class="label">ठिकाण [Location ] </label>
+				<div class="control">
+				<input
+				class="input"
+				type="text"
+				placeholder="ठिकाण इनपुट करा (Input location )"
+				name="PriorityLocation2"
+				/>
+			</div>
+		</div>
+ <br>
+		<div class="field">
+ 	   <label class="label">7. तुमच्या तिसऱ्या प्रतिक्रियासाठी ठिकाण  <br> Location for third priority </label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            placeholder=" ठिकाण इनपुट करा (Input location )"
+            name="PriorityLocation3"
+          />
+			</div>
+		</div>
+
+
+  </br>
+      <div class="field">
+        <label class="label">8. सूचना आणि प्रतिक्रिया <br> Suggestions and feedback</label>
+        <div class="control">
+          <textarea
+            class="textarea"
+            placeholder="कृपया आपल्या सूचना आणि प्रतिक्रिया द्या ( Please provide your suggestions and feedback)"
+            name="Notes"
+          ></textarea>
+        </div>
+      </div>
+
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-primary" type="onclick" id="submit-button">
+            Submit
+          </button>
+        </div>
+        <div class="control">
+          <button class="button is-danger">Cancel</button>
+        </div>
+      </div>
+	
+	  <h4 > CWAS, CEPT UNIVERSITY@2024 </h4>
+    </form>
+    <div id="popup"></div>
+    
+	<div
+      id="message"
+      style="
+        display: none;
+	  position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 40px;
+      background-color: #FBFCFC;
+      z-index: 1000;
+      align-items: center;
+	  text-align: center;
+      border: 1px solid #ccc;
+      border-radius: 15px;
+      "
+    ></div>
+	
+
+	
+	
+  <div id="overlay"></div>
+  
+  <script>
+    var travelCheckboxes = document.querySelectorAll('.Projects');
+    var ratingSlider = document.getElementById('rating-slider');
+    var ratingValue = document.getElementById('rating-value');
+    var priorityContainer = document.getElementById('priority-options');
+	var secondPriorityContainer = document.getElementById('second-priority-options');
+    var popup = document.getElementById('popup');
+    var overlay = document.getElementById('overlay');
+    var maxTravelSelections = 3;
+    var maxPrioritySelections = 1; // Since it's a checkbox with max 1 selection
+
+    travelCheckboxes.forEach(function(checkbox) {
+      checkbox.addEventListener('change', function() {
+        var selectedTravelCheckboxes = document.querySelectorAll('.Projects:checked');
+
+        if (selectedTravelCheckboxes.length > maxTravelSelections) {
+          showPopup1();
+          this.checked = false; // Uncheck the last checkbox if more than three are selected
+        } else {
+          updatePriorityOptions(selectedTravelCheckboxes);
+        }
+      });
+    });
+
+    ratingSlider.addEventListener('input', function() {
+      ratingValue.textContent = 'Rating: ' + this.value;
+    });
+
+    function updatePriorityOptions(selectedTravelCheckboxes) {
+      priorityContainer.innerHTML = ''; // Clear existing options
+	  secondPriorityContainer.innerHTML = ''; // Clear existing options
+
+      selectedTravelCheckboxes.forEach(function(checkbox) {
+        var value = checkbox.value;
+        var iconClass = getIconClass(value);
+        var text = getText(value);
+		var text2 = getText2(value);
+        var checkboxOption = document.createElement('label');
+        checkboxOption.innerHTML = `
+          <input type="checkbox" name="priority-option" class="priority-option" value="${value}">
+          <div class="option">
+            <span class="icon"><i class="${iconClass}"></i></span>
+            <span class="text">${text} <br> ${text2} </span>
+          </div>
+        `;
+
+        priorityContainer.appendChild(checkboxOption);
+      });
+
+      var priorityCheckboxes = document.querySelectorAll('.priority-option');
+
+      priorityCheckboxes.forEach(function(checkbox) {
+        checkbox.addEventListener('change', function() {
+          var selectedPriorityCheckboxes = document.querySelectorAll('.priority-option:checked');
+
+          if (selectedPriorityCheckboxes.length > maxPrioritySelections) {
+            showPopup2();
+            this.checked = false; // Uncheck the last checkbox if more than one is selected
+          } else {
+            updateSecondPriorityOptions(selectedPriorityCheckboxes);
+          }
+        });
+      });
+    }
+	
+	function updateSecondPriorityOptions(selectedPriorityCheckboxes) {
+      var availableOptions = document.querySelectorAll('.priority-option:not(:checked)');
+      secondPriorityContainer.innerHTML = ''; // Clear existing options
+
+      availableOptions.forEach(function(checkbox) {
+        var value = checkbox.value;
+        var iconClass = getIconClass(value);
+        var text = getText(value);
+		var text2 = getText2(value);
+
+        var checkboxOption = document.createElement('label');
+        checkboxOption.innerHTML = `
+          <input type="checkbox" name="second-priority-option" class="second-priority-option" value="${value}">
+          <div class="option">
+            <span class="icon"><i class="${iconClass}"></i></span>
+            <span class="text">${text} <br> ${text2} </span>
+          </div>
+        `;
+
+        secondPriorityContainer.appendChild(checkboxOption);
+      });
+
+      var secondPriorityCheckboxes = document.querySelectorAll('.second-priority-option');
+
+      secondPriorityCheckboxes.forEach(function(checkbox) {
+        checkbox.addEventListener('change', function() {
+          var selectedSecondPriorityCheckboxes = document.querySelectorAll('.second-priority-option:checked');
+
+          if (selectedSecondPriorityCheckboxes.length > maxPrioritySelections) {
+            showPopup3('You can select only one option for the second priority.');
+            this.checked = false; // Uncheck the last checkbox if more than one is selected
+          }
+        });
+      });
+    }
+
+
+    function showPopup1() {
+      popup.innerHTML = '<p>You can not select more than three options . <br> .<br> </p><button onclick="closePopup1()">OK</button>';
+      popup.style.display = 'block';
+      overlay.style.display = 'block';
+    }
+
+    function closePopup1() {
+      popup.style.display = 'none';
+      overlay.style.display = 'none';
+    }
+
+    function showPopup2() {
+      popup.innerHTML = '<p>Only one option can be selected. <br> </p><button onclick="closePopup2()">OK</button>';
+      popup.style.display = 'block';
+      overlay.style.display = 'block';
+    }
+
+    function closePopup2() {
+      popup.style.display = 'none';
+      overlay.style.display = 'none';
+    }
+	
+	    function showPopup3() {
+      popup.innerHTML = '<p>Only one option can be selected. <br> </p><button onclick="closePopup3()">OK</button>';
+      popup.style.display = 'block';
+      overlay.style.display = 'block';
+    }
+
+    function closePopup3() {
+      popup.style.display = 'none';
+      overlay.style.display = 'none';
+    }
+	
+    function getIconClass(value) {
+      switch (value) {
+        case 'Individual Household toilets':
+          return 'fas fa-toilet';
+        case 'Solid waste management':
+          return 'fas fa-trash';
+	    case 'Better Public Transport':
+          return 'fas fa-bus';
+		case 'Roads and footpath':
+          return 'fas fa-road';
+		case 'Local market':
+          return 'fas fa-store';
+		case 'School':
+          return 'fas fa-school';
+
+		case 'Storm water drain':
+          return 'fas fa-circle';
+		 case 'Open Space':
+          return 'fas fa-street-view';
+		case 'Street Light':
+          return 'fas fa-lightbulb';
+		  
+	case 'Recreational activities':
+          return 'fas fa-tree';
+        default:
+          return '';
+      }
+    }
+
+    function getText(value) {
+      switch (value) {
+        case 'Individual Household toilets':
+          return 'वैयक्तिक घरगुती शौचालये ';
+        case 'Solid waste management':
+          return 'घनकचरा व्यवस्थापन';
+		case 'Better Public Transport':
+          return 'उत्तम सार्वजनिक वाहतूक';
+		case 'Roads and footpath':
+          return 'रस्ते आणि पदपथ ';
+		case 'Local market':
+          return 'स्थानिक बाजार';
+		case 'School':
+          return 'शाळा आणि त्याची दुरुस्ती ';
+		case 'Storm water drain':
+          return 'पावसाळी पाणी निचरा';
+		case 'Recreational activities':
+          return 'मनोरंजक उपक्रम ';
+		  	case 'Open Space':
+          return 'ओपन स्पेस आणि ग्रीन स्पेसचा विकास ';		
+		  case 'Street Light':
+          return 'स्‍ट्रीट लाईट ';
+        default:
+          return '';
+      }
+    }
+	
+	function getText2(value) {
+      switch (value) {
+        case 'Individual Household toilets':
+          return 'Individual Household toilets';
+        case 'Solid waste management':
+          return 'Solid waste management';
+		case 'Better Public Transport':
+          return 'Better Public Transport';
+		case 'Roads and footpath':
+          return 'Road and Footpath';
+		case 'Local market':
+          return 'Local Market';
+		case 'School':
+          return 'School and its repair and maintenance';
+		case 'Storm water drain':
+          return 'Storm Water Drain';
+		case 'Recreational activities':
+          return 'Recreational activities';
+		  	case 'Open Space':
+          return 'Open spaces and green spaces development';		
+		  case 'Street Light':
+          return 'Street Light';
+        default:
+          return '';
+      }
+    }
+  </script>
+
+    <script>
+      document.getElementById("submit-button").addEventListener("click", function (e) {
+        e.preventDefault(); // Prevent the default form submission
+        document.getElementById("message").textContent = "Submitting..";
+        document.getElementById("message").style.display = "block";
+		document.getElementById("submit-button").disabled = true;
+
+        // Collect the form data
+        var formData = new FormData(document.getElementById("form"));
+        var keyValuePairs = [];
+        for (var pair of formData.entries()) {
+          keyValuePairs.push(pair[0] + "=" + pair[1]);
+        }
+
+        var formDataString = keyValuePairs.join("&");
+
+        // Send a POST request to your Google Apps Script
+        fetch(
+          "https://script.google.com/macros/s/AKfycbz-seAnzLsONf0e17RFtV_zsIhcjpRF7XZ2A-IMJzgPjluNiO2Dr_7eh_wwP1DJwJM/exec",
+          {
+            redirect: "follow",
+            method: "POST",
+            body: formDataString,
+            headers: {
+              "Content-Type": "text/plain;charset=utf-8",
+            },
+          }
+        )
+          .then(function (response) {
+            // Check if the request was successful
+            if (response) {
+              return response; // Assuming your script returns JSON response
+            } else {
+              throw new Error("Failed to submit the form.");
+            }
+          })
+          .then(function (data) {
+            // Display a success message
+            document.getElementById("message").textContent =
+              "Data submitted successfully!";
+            document.getElementById("message").style.display = "block";
+            document.getElementById("message").style.backgroundColor = "green";
+            document.getElementById("message").style.color = "beige";
+            document.getElementById("submit-button").disabled = false;
+            document.getElementById("form").reset();
+
+            setTimeout(function () {
+              document.getElementById("message").textContent = "";
+              document.getElementById("message").style.display = "none";
+            }, 2600);
+          })
+          .catch(function (error) {
+            // Handle errors, you can display an error message here
+            console.error(error);
+            document.getElementById("message").textContent =
+              "An error occurred while submitting the form.";
+            document.getElementById("message").style.display = "block";
+          });
+      });
+    </script>
+	
+  </body>
+</html>
