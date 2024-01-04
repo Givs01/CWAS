@@ -1,9 +1,11 @@
 <!DOCTYPE html>
+
+<html lang="en">
 <html>
   <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Public Opinion - Pre-Budget Consultation -</title>
+  <title> Pre-Budget Consultation </title>
   
     <link
       rel="stylesheet"
@@ -15,6 +17,35 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
   />
   <style>
+
+  
+  .givs-section {
+	align-items: center;
+      padding: 20px; /
+      border-radius: 0px; /
+      margin-bottom: 20px; /
+    }
+	
+    .question-section {
+      background-color: #f5f5f5; 
+      padding: 20px; /
+      border-radius: 0px; /
+      margin-bottom: 20px; /
+    }
+
+
+    #logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    #logo {
+      max-width: 100px; 
+      border-radius: 50%;
+      margin: 10px; 
+      overflow: hidden; 
+    }
+	  
     body {
       font-family: Arial, sans-serif;
       margin: 5px;
@@ -24,26 +55,25 @@
     h1 {
       color: #333;
 	  font-size: 8px;
-	  text-align: center;
+	  text-align: Left;
     }
 	
 	h3 {
       color: #333;
-	  text-align: center;
+	  text-align: left;
     }
 
 
 	h4 {
       color: #ccc;
-	  font-size: 8px;
+	  font-size: 4px;
 	  text-align: center;
     }
 	
 	
     label {
       display: block;
-	  background-color: #FBFCFC;
-      margin: 10px;
+	  margin: 10px;
     }
 
     input[type="checkbox"] {
@@ -98,7 +128,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       padding: 40px;
-      background-color: #bda9a8;
+      background-color: #FFF;
       z-index: 1000;
       align-items: center;
 	  text-align: center;
@@ -129,16 +159,24 @@
   <body>
     <section class="hero is-primary is-bold">
       <div class="hero-body">
-        <div class="container">
-         <h1 class="title">Kulgaon Badlapur Municipal Council <br> कुळगाव बदलापूर नगरपरिषद </h1>
-		 <h3 class="label">Pre-Budget Consultation <br> बजेटपूर्व सल्लामसलत </h3>
-		  
-        </div>
-      </div>
+        <div class="container1">
+			<div id="logo-container">
+			<img id="logo" src="C:\Users\gaurav.kushwaha\Downloads\logo.jpg" alt="Logo">
+		      <div class="container1">
+				<h1 class="title"> Kulgaon Badlapur Municipal Council <br> कुळगाव बदलापूर नगरपरिषद  </h1>
+				<h3 class="label">Pre-Budget Consultation for FY 2023-24 <br> आर्थिक वर्ष 2023-24 साठी बजेटपूर्व सल्लामसलत </h3>
+		      </div>
+			</div>
+		</div>
     </section>
+	
+	
     <form id="form" class="container m-4 pl-4" method="POST">
-     
-      <div class="field">
+      
+
+	  
+      <section class="question-section">
+	  <div class="field">
         <label class="label">1. लिंग  [ Gender ]</label>
         <div class="control">
           <label class="radio">
@@ -154,8 +192,10 @@
           </label>
         </div>
       </div>
+	  </section>
 	  <br>
 	  
+	  <section class="question-section">
 	  	 <div class="field">
         <label class="label">2. वय  [  Age ] </label>
         <div class="control">
@@ -167,8 +207,11 @@
           />
         </div>
       </div>
+	  </section>
  <br>
-	  
+	 
+	 
+	 <section class="question-section"> 
 	 <div class="field">
         <label class="label">3. निवासी वार्ड क्रमांक  <br> Residential ward number  </label>
         <div class="control">
@@ -180,9 +223,10 @@
           />
         </div>
       </div>
+	  </section>
  <br>
 	  
-	  
+	 <section class="question-section"> 
       <div class="field">
         <label class="label">4. कृपया तुमच्या शहरासाठी तुम्हाला हवे असलेले प्राधान्यक्रमानुसार कोणतेही 3 प्रकल्प निवडा <br> Please select any 3 projects based on priority that you want for your city</label>
 
@@ -190,31 +234,69 @@
       <input type="checkbox" name="Projects2" class="Projects" value="Individual Household toilets">
       <div class="option">
         <span class="icon"><i class="fas fa-toilet"></i></span>
-        <span class="text">वैयक्तिक घरगुती शौचालये <br> Individual household toilet  </span>
+        <span class="text">वैयक्तिक घरगुती शौचालये <br> Individual Household Toilet  </span>
       </div>
     </label>
+	
+			<label>
+      <input type="checkbox" name="Projects9" class="Projects" value="Storm water drain">
+      <div class="option">
+        <span class="icon"><i class="fas fa-circle"></i></span>
+        <span class="text"> पावसाळी पाणी निचरा <br> Storm Water Drainage </span>
+      </div>
+    </label>
+	
+	    <label>
+      <input type="checkbox" name="Projects3" class="Projects" value="Solid waste management">
+      <div class="option">
+        <span class="icon"><i class="fas fa-trash"></i></span>
+        <span class="text"> घरोघरी कचरा संकलन<br>Door to Door Waste Collection </span>
+      </div>
+    </label>
+
+
 
 	<label>
       <input type="checkbox" name="Projects6" class="Projects" value="Local market">
       <div class="option">
         <span class="icon"><i class="fas fa-store"></i></span>
-        <span class="text"> स्थानिक बाजार <br>Local Market </span>
+        <span class="text"> स्थानिक बाजारपेठेचा विकास <br>Development of Local Market </span>
       </div>
     </label>
 	
-		<label>
-      <input type="checkbox" name="Projects9" class="Projects" value="Storm water drain">
-      <div class="option">
-        <span class="icon"><i class="fas fa-circle"></i></span>
-        <span class="text"> पावसाळी पाणी निचरा <br> Storm Water Drain </span>
-      </div>
-    </label>
+
 	
 		<label>
       <input type="checkbox" name="Projects5" class="Projects" value="Roads and footpath">
       <div class="option">
         <span class="icon"><i class="fas fa-road"></i></span>
-        <span class="text"> रस्ते आणि पदपथ <br>Road and Footpath </span>
+        <span class="text"> रस्ते आणि पदपथ <br>Roads and Footpath </span>
+      </div>
+    </label>
+			 
+	<label>
+      <input type="checkbox" name="Projects8" class="Projects" value="Street Light">
+      <div class="option">
+        <span class="icon"><i class="fas fa-lightbulb"></i></span>
+        <span class="text"> स्‍ट्रीट लाईट <br>Street Lights </span>
+      </div>
+    </label>
+	
+	
+		 
+	<label>
+      <input type="checkbox" name="Projects4" class="Projects" value="Better Public Transport">
+      <div class="option">
+        <span class="icon"><i class="fas fa-bus"></i></span>
+        <span class="text"> सार्वजनिक वाहतूक वाढवणे  <br> Enhancing Public Transportation  </span>
+      </div>
+    </label>
+			 		 
+	<label>
+      <input type="checkbox" name="Projects7" class="Projects" value="School">
+      <div class="option">
+        <span class="icon"><i class="fas fa-school"></i></span>
+        <span class="text"> शाळेच्या पायाभूत सुविधा वाढवणे  <br>Enhance the School Infrastructure</span>
       </div>
     </label>
 	
@@ -222,109 +304,78 @@
       <input type="checkbox" name="Projects10" class="Projects" value="Recreational activities">
       <div class="option">
         <span class="icon"><i class="fas fa-tree"></i></span>
-        <span class="text"> मनोरंजक उपक्रम <br>Recreational activities </span>
+        <span class="text"> मनोरंजक क्रियाकलापांचा विकास <br>Development of Recreational Activities </span>
       </div>
     </label>
 		 
-    <label>
-      <input type="checkbox" name="Projects3" class="Projects" value="Solid waste management">
-      <div class="option">
-        <span class="icon"><i class="fas fa-trash"></i></span>
-        <span class="text"> घनकचरा व्यवस्थापन <br>Solid waste management </span>
-      </div>
-    </label>
 
-	 
-	<label>
-      <input type="checkbox" name="Projects4" class="Projects" value="Better Public Transport">
-      <div class="option">
-        <span class="icon"><i class="fas fa-bus"></i></span>
-        <span class="text"> उत्तम सार्वजनिक वाहतूक  <br>Better Public Transport  </span>
-      </div>
-    </label>
-	
-	 
-		 
-	<label>
-      <input type="checkbox" name="Projects7" class="Projects" value="School">
-      <div class="option">
-        <span class="icon"><i class="fas fa-school"></i></span>
-        <span class="text"> शाळा आणि त्याची दुरुस्ती  <br>School and its repair and maintenance</span>
-      </div>
-    </label>
-	
-		 
-	<label>
-      <input type="checkbox" name="Projects8" class="Projects" value="Street Light">
-      <div class="option">
-        <span class="icon"><i class="fas fa-lightbulb"></i></span>
-        <span class="text"> स्‍ट्रीट लाईट <br>Street Light </span>
-      </div>
-    </label>
-	
 		<label>
       <input type="checkbox" name="Projects1" class="Projects" value="Open Space">
       <div class="option">
         <span class="icon"><i class="fas fa-street-view"></i></span>
-        <span class="text"> ओपन स्पेस आणि ग्रीन स्पेसचा विकास  <br>Open spaces and green spaces development</span>
-      </div>
-    </label>	 
+        <span class="text"> ओपन स्पेस आणि ग्रीन स्पेसचा विकास  <br>Developments of Open Spaces and Green Spaces</span>
+		</div>
+		</label>	 
 
-	</div>
-			 
+		</div>
+		</section>	 
  <br>
 
-	 
+	 <section class="question-section"> 
 		<div class="field">
 			<label class="label">5.  तुमच्या पहिल्या प्राथमिकत्यासाठी प्रकल्प निवडा   <br> Please select your first priority?</label>
 			<div id="priority-options" >
 			</div>
     	  
-			<label class="label">ठिकाण [Location ] </label>
+			<label class="label">तुमच्या पहिल्या प्राथमिकत्यासाठी ठिकाण [Location for your first priority ] </label>
 			<div class="control">
 			<input
             class="input"
             type="text"
-            placeholder="ठिकाण इनपुट करा (Input location )"
+            placeholder="ठिकाण इनपुट करा (Enter location )"
             name="PriorityLocation1"
 			/>
-		  
-		   </div>
+		  		   </div>
 		</div>
+		</section>
  <br>
 
 
- 
+	<section class="question-section"> 
        <div class="field">
         <label class="label">6. तुमच्या दुसऱ्या प्राथमिकत्यासाठी प्रकल्प निवडा <br> Please select your second	 priority?</label>
 			<div id="second-priority-options">
 		
 			</div>
-				<label class="label">ठिकाण [Location ] </label>
+				<label class="label">तुमच्या दुसऱ्या प्राथमिकत्यासाठी ठिकाण [Location for your second priority ] </label>
 				<div class="control">
 				<input
 				class="input"
 				type="text"
-				placeholder="ठिकाण इनपुट करा (Input location )"
+				placeholder="ठिकाण इनपुट करा (Enter location )"
 				name="PriorityLocation2"
 				/>
 			</div>
 		</div>
+		</section>
  <br>
+ 
+	<section class="question-section"> 
 		<div class="field">
  	   <label class="label">7. तुमच्या तिसऱ्या प्रतिक्रियासाठी ठिकाण  <br> Location for third priority </label>
         <div class="control">
           <input
             class="input"
             type="text"
-            placeholder=" ठिकाण इनपुट करा (Input location )"
+            placeholder=" ठिकाण इनपुट करा (Enter location )"
             name="PriorityLocation3"
           />
 			</div>
 		</div>
-
-
-  </br>
+	</section>
+  <br>
+  
+  <section class="question-section"> 
       <div class="field">
         <label class="label">8. सूचना आणि प्रतिक्रिया <br> Suggestions and feedback</label>
         <div class="control">
@@ -335,7 +386,10 @@
           ></textarea>
         </div>
       </div>
+	 </section>
 
+
+	<section class="givs-section">
       <div class="field is-grouped">
         <div class="control">
           <button class="button is-primary" type="onclick" id="submit-button">
@@ -346,15 +400,24 @@
           <button class="button is-danger">Cancel</button>
         </div>
       </div>
+	   </section>
 	
-	  <h4 > CWAS, CEPT UNIVERSITY@2024 </h4>
+ <br> <br> <br> <br>
+	<div class="content has-text-left">
+
+		<p>
+		This form is designed by <strong> <a href="https://cwas.org.in/">Center for Water and Sanitation (CWAS) </a> </strong>  for <strong>Kulgaon Badlapur Municipal Council</strong> 
+		</p>
+	</div>
+<br>
+
     </form>
     <div id="popup"></div>
     
 	<div
       id="message"
       style="
-        display: none;
+      display: none;
 	  position: fixed;
       top: 50%;
       left: 50%;
@@ -477,7 +540,7 @@
 
 
     function showPopup1() {
-      popup.innerHTML = '<p>You can not select more than three options . <br> .<br> </p><button onclick="closePopup1()">OK</button>';
+      popup.innerHTML = '<p> <strong> You can not select more than three options </strong> <br> <br> </p><button onclick="closePopup1()">OK</button>';
       popup.style.display = 'block';
       overlay.style.display = 'block';
     }
@@ -488,7 +551,7 @@
     }
 
     function showPopup2() {
-      popup.innerHTML = '<p>Only one option can be selected. <br> </p><button onclick="closePopup2()">OK</button>';
+      popup.innerHTML = '<p> <strong>Only one option can be selected </strong> <br> <br> </p><button onclick="closePopup2()">OK</button>';
       popup.style.display = 'block';
       overlay.style.display = 'block';
     }
@@ -499,7 +562,7 @@
     }
 	
 	    function showPopup3() {
-      popup.innerHTML = '<p>Only one option can be selected. <br> </p><button onclick="closePopup3()">OK</button>';
+      popup.innerHTML = '<p> <strong>Only one option can be selected </strong> <br> <br> </p><button onclick="closePopup3()">OK</button>';
       popup.style.display = 'block';
       overlay.style.display = 'block';
     }
@@ -543,19 +606,19 @@
         case 'Individual Household toilets':
           return 'वैयक्तिक घरगुती शौचालये ';
         case 'Solid waste management':
-          return 'घनकचरा व्यवस्थापन';
+          return 'घरोघरी कचरा संकलन';
 		case 'Better Public Transport':
-          return 'उत्तम सार्वजनिक वाहतूक';
+          return 'सार्वजनिक वाहतूक वाढवणे';
 		case 'Roads and footpath':
           return 'रस्ते आणि पदपथ ';
 		case 'Local market':
-          return 'स्थानिक बाजार';
+          return 'स्थानिक बाजारपेठेचा विकास';
 		case 'School':
-          return 'शाळा आणि त्याची दुरुस्ती ';
+          return 'शाळेच्या पायाभूत सुविधा वाढवणे ';
 		case 'Storm water drain':
           return 'पावसाळी पाणी निचरा';
 		case 'Recreational activities':
-          return 'मनोरंजक उपक्रम ';
+          return 'मनोरंजक क्रियाकलापांचा विकास';
 		  	case 'Open Space':
           return 'ओपन स्पेस आणि ग्रीन स्पेसचा विकास ';		
 		  case 'Street Light':
@@ -570,23 +633,23 @@
         case 'Individual Household toilets':
           return 'Individual Household toilets';
         case 'Solid waste management':
-          return 'Solid waste management';
+          return 'Door to Door Waste Collection';
 		case 'Better Public Transport':
-          return 'Better Public Transport';
+          return 'Enhancing Public Transportation';
 		case 'Roads and footpath':
-          return 'Road and Footpath';
-		case 'Local market':
-          return 'Local Market';
+          return 'Roads and Footpath';
+		case 'Local Market':
+          return 'Development of Local Market';
 		case 'School':
-          return 'School and its repair and maintenance';
+          return 'Enhance the School Infrastructure';
 		case 'Storm water drain':
-          return 'Storm Water Drain';
+          return 'Storm Water Drainage';
 		case 'Recreational activities':
-          return 'Recreational activities';
+          return 'Development of Recreational Activities';
 		  	case 'Open Space':
-          return 'Open spaces and green spaces development';		
+          return 'Developments of Open Spaces and Green Spaces';		
 		  case 'Street Light':
-          return 'Street Light';
+          return 'Street Lights';
         default:
           return '';
       }
