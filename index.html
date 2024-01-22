@@ -21,16 +21,16 @@
   
   .givs-section {
 	align-items: center;
-      padding: 20px; /
-      border-radius: 0px; /
-      margin-bottom: 20px; /
+      padding: 20px; 
+      border-radius: 0px; 
+      margin-bottom: 20px; 
     }
 	
     .question-section {
       background-color: #f5f5f5; 
-      padding: 20px; /
-      border-radius: 0px; /
-      margin-bottom: 20px; /
+      padding: 20px; 
+      border-radius: 0px; 
+      margin-bottom: 20px; 
     }
 
 
@@ -54,10 +54,11 @@
 
     h1 {
       color: #333;
+	  font-size: 8px;
 	  text-align: Left;
     }
 	
-	h2 {
+	h3 {
       color: #333;
 	  text-align: left;
     }
@@ -159,11 +160,11 @@
     <section class="hero is-primary is-bold">
       <div class="hero-body">
         <div class="container1">
-			<div id="logo-container">
-			<img id="logo" src="logo.jpg" alt="Logo">
-		      <div class="container1">
+			  <div id="logo-container">
+			    <img id="logo" src="C:\Users\gaurav.kushwaha\Downloads\logo.jpg" alt="Logo">
+		    <div class="container1">
 				<h1 class="title"> Kulgaon Badlapur Municipal Council <br> कुळगाव बदलापूर नगरपरिषद  </h1>
-				<h2 class="label">Pre-Budget Consultation for FY 2024-25 <br> आर्थिक वर्ष 2024-25 साठी बजेटपूर्व सल्लामसलत </h2>
+				<h3 class="label">Pre-Budget Consultation for FY 2024-25 <br> आर्थिक वर्ष 2024-25 च्या अर्थसंकल्पासाठी <br>कु. ब. न. प. चा नागरीकांशी संवाद </h3>
 		      </div>
 			</div>
 		</div>
@@ -230,10 +231,10 @@
         <label class="label">4. कृपया तुमच्या शहरासाठी तुम्हाला हवे असलेले प्राधान्यक्रमानुसार कोणतेही 3 प्रकल्प निवडा <br> Please select any 3 projects based on priority that you want for your city</label>
 
     <label>
-      <input type="checkbox" name="Projects2" class="Projects" value="Individual Household toilets">
+      <input type="checkbox" name="Projects2" class="Projects" value="Underground Sewer Network">
       <div class="option">
-        <span class="icon"><i class="fas fa-toilet"></i></span>
-        <span class="text">वैयक्तिक घरगुती शौचालये <br> Individual Household Toilet  </span>
+        <span class="icon"><i class="fas fa-ring"></i></span>
+        <span class="text">भूमिगत गटार <br> Underground Sewer Network </span>
       </div>
     </label>
 	
@@ -246,12 +247,23 @@
     </label>
 	
 	    <label>
-      <input type="checkbox" name="Projects3" class="Projects" value="Solid waste management">
+      <input type="checkbox" name="Projects3" class="Projects" value="SATIS Project">
       <div class="option">
-        <span class="icon"><i class="fas fa-trash"></i></span>
-        <span class="text"> घरोघरी कचरा संकलन<br>Door to Door Waste Collection </span>
+        <span class="icon"><i class='fas fa-life-ring'></i></span>
+        <span class="text"> स्टेशन परिसर वाहतूक सुधारणा योजना<br>SATIS project: Station Area Traffic Improvement Scheme </span>
       </div>
     </label>
+
+
+
+	<label>
+      <input type="checkbox" name="Projects6" class="Projects" value="Lake Improvement and Beautification">
+      <div class="option">
+        <span class="icon"><i class="fas fa-water"></i></span>
+        <span class="text"> तलाव परिसर सुशोभीकरण <br>Lake Area Improvement and Beautification </span>
+      </div>
+    </label>
+	
 
 	
 		<label>
@@ -261,23 +273,22 @@
         <span class="text"> रस्ते आणि पदपथ <br>Roads and Footpath </span>
       </div>
     </label>
-
-	      
+			 
 	<label>
-      <input type="checkbox" name="Projects8" class="Projects" value="Street Light">
+      <input type="checkbox" name="Projects8" class="Projects" value="Building theatre">
       <div class="option">
-        <span class="icon"><i class="fas fa-lightbulb"></i></span>
-        <span class="text"> स्‍ट्रीट लाईट <br>Street Lights </span>
+        <span class="icon"><i class="fas fa-theater-masks"></i></span>
+        <span class="text"> नाट्यगृह निर्माण  <br>Building theatre (auditorium) </span>
       </div>
     </label>
 	
 	
 		 
 	<label>
-      <input type="checkbox" name="Projects4" class="Projects" value="Better Public Transport">
+      <input type="checkbox" name="Projects4" class="Projects" value="Public Transportation system">
       <div class="option">
         <span class="icon"><i class="fas fa-bus"></i></span>
-        <span class="text"> सार्वजनिक वाहतूक वाढवणे  <br> Enhancing Public Transportation  </span>
+        <span class="text"> सार्वजनिक वाहतूक सेवा सुरू करणे  <br> Introduction of Public Transportation system  </span>
       </div>
     </label>
 			 		 
@@ -289,23 +300,22 @@
       </div>
     </label>
 	
+		<label>
+      <input type="checkbox" name="Projects10" class="Projects" value="Recreational activities">
+      <div class="option">
+        <span class="icon"><i class="fas fa-tree"></i></span>
+        <span class="text"> मनोरंजक क्रियाकलापांचा विकास <br>Development of Recreational Activities </span>
+      </div>
+    </label>
 		 
 
 		<label>
       <input type="checkbox" name="Projects1" class="Projects" value="Open Space">
       <div class="option">
         <span class="icon"><i class="fas fa-street-view"></i></span>
-        <span class="text"> ओपन स्पेस आणि ग्रीन स्पेसचा विकास  <br>Development of Open Spaces and Green Spaces</span>
+        <span class="text"> ओपन स्पेस आणि ग्रीन स्पेसचा विकास  <br>Developments of Open Spaces and Green Spaces</span>
 		</div>
-		</label>
-
-	      	      	<label>
-      <input type="checkbox" name="Projects6" class="Projects" value="Local market">
-      <div class="option">
-        <span class="icon"><i class="fas fa-store"></i></span>
-        <span class="text"> स्थानिक बाजारपेठेचा विकास <br>Development of Local Market </span>
-      </div>
-    </label>
+		</label>	 
 
 		</div>
 		</section>	 
@@ -313,11 +323,11 @@
 
 	 <section class="question-section"> 
 		<div class="field">
-			<label class="label">5.  तुमच्या पहिल्या प्राथमिकत्यासाठी प्रकल्प निवडा   <br> Please select your first priority?</label>
+			<label class="label">5.  तुमची पहिली प्राथमिकता निवडा   <br> Please select your first priority?</label>
 			<div id="priority-options" >
 			</div>
     	  
-			<label class="label">तुमच्या पहिल्या प्राथमिकत्यासाठी ठिकाण [Location for your first priority ] </label>
+			<label class="label">तुमची पहिली प्राथमिकतासाठी ठिकाण [Location for your first priority ] </label>
 			<div class="control">
 			<input
             class="input"
@@ -333,11 +343,11 @@
 
 	<section class="question-section"> 
        <div class="field">
-        <label class="label">6. तुमच्या दुसऱ्या प्राथमिकत्यासाठी प्रकल्प निवडा <br> Please select your second	 priority?</label>
+        <label class="label">6. तुमची दुसरी प्राथमिकता प्रकल्प निवडा <br> Please select your second	 priority?</label>
 			<div id="second-priority-options">
 		
 			</div>
-				<label class="label">तुमच्या दुसऱ्या प्राथमिकत्यासाठी ठिकाण [Location for your second priority ] </label>
+				<label class="label">तुमची दुसरी प्राथमिकतासाठी ठिकाण [Location for your second priority ] </label>
 				<div class="control">
 				<input
 				class="input"
@@ -352,7 +362,7 @@
  
 	<section class="question-section"> 
 		<div class="field">
- 	   <label class="label">7. तुमच्या तिसऱ्या प्रतिक्रियासाठी ठिकाण  <br> Location for third priority </label>
+ 	   <label class="label">7. तुमची तिसरी प्राथमिकतासाठी ठिकाण  <br> Location for third priority </label>
         <div class="control">
           <input
             class="input"
@@ -396,7 +406,7 @@
 	<div class="content has-text-left">
 
 		<p>
-		This form is designed by <strong> <a href="https://cwas.org.in/" target=”_blank” >Center for Water and Sanitation (CWAS) </a> </strong>  for <strong>Kulgaon Badlapur Municipal Council</strong> 
+		This form is designed by <strong> <a href="https://cwas.org.in/">Center for Water and Sanitation (CWAS) </a> </strong>  for <strong>Kulgaon Badlapur Municipal Council</strong> 
 		</p>
 	</div>
 <br>
@@ -463,7 +473,7 @@
         var value = checkbox.value;
         var iconClass = getIconClass(value);
         var text = getText(value);
-		var text2 = getText2(value);
+		    var text2 = getText2(value);
         var checkboxOption = document.createElement('label');
         checkboxOption.innerHTML = `
           <input type="checkbox" name="priority-option" class="priority-option" value="${value}">
@@ -564,16 +574,16 @@
 	
     function getIconClass(value) {
       switch (value) {
-        case 'Individual Household toilets':
-          return 'fas fa-toilet';
-        case 'Solid waste management':
-          return 'fas fa-trash';
-	    case 'Better Public Transport':
+        case 'Underground Sewer Network':
+          return 'fas fa-ring';
+        case 'SATIS Project':
+          return 'fas fa-life-ring';
+	    case 'Public Transportation system':
           return 'fas fa-bus';
 		case 'Roads and footpath':
           return 'fas fa-road';
-		case 'Local market':
-          return 'fas fa-store';
+		case 'Lake Improvement and Beautification':
+          return 'fas fa-water';
 		case 'School':
           return 'fas fa-school';
 
@@ -581,8 +591,8 @@
           return 'fas fa-circle';
 		 case 'Open Space':
           return 'fas fa-street-view';
-		case 'Street Light':
-          return 'fas fa-lightbulb';
+		case 'Building theatre':
+          return 'fas fa-theater-masks';
 		  
 	case 'Recreational activities':
           return 'fas fa-tree';
@@ -593,24 +603,26 @@
 
     function getText(value) {
       switch (value) {
-        case 'Individual Household toilets':
-          return 'वैयक्तिक घरगुती शौचालये ';
-        case 'Solid waste management':
-          return 'घरोघरी कचरा संकलन';
-		case 'Better Public Transport':
-          return 'सार्वजनिक वाहतूक वाढवणे';
+        case 'Underground Sewer Network':
+          return 'भूमिगत गटार';
+        case 'SATIS Project':
+          return 'स्टेशन परिसर वाहतूक सुधारणा योजना';
+		case 'Public Transportation system':
+          return 'सार्वजनिक वाहतूक सेवा सुरू करणे';
 		case 'Roads and footpath':
           return 'रस्ते आणि पदपथ ';
-		case 'Local market':
-          return 'स्थानिक बाजारपेठेचा विकास';
+		case 'Lake Improvement and Beautification':
+          return 'तलाव परिसर सुशोभीकरण';
 		case 'School':
           return 'शाळेच्या पायाभूत सुविधा वाढवणे ';
 		case 'Storm water drain':
           return 'पावसाळी पाणी निचरा';
-	  	case 'Open Space':
+		case 'Recreational activities':
+          return 'मनोरंजक क्रियाकलापांचा विकास';
+		  	case 'Open Space':
           return 'ओपन स्पेस आणि ग्रीन स्पेसचा विकास ';		
-		  case 'Street Light':
-          return 'स्‍ट्रीट लाईट ';
+		  case 'Building theatre':
+          return 'नाट्यगृह निर्माण ';
         default:
           return '';
       }
@@ -618,24 +630,26 @@
 	
 	function getText2(value) {
       switch (value) {
-        case 'Individual Household toilets':
-          return 'Individual Household toilets';
-        case 'Solid waste management':
-          return 'Door to Door Waste Collection';
-		case 'Better Public Transport':
-          return 'Enhancing Public Transportation';
+        case 'Underground Sewer Network':
+          return 'Underground Sewer Network';
+        case 'SATIS Project':
+          return 'SATIS project: Station Area Traffic Improvement Scheme';
+		case 'Public Transportation system':
+          return 'Introduction of Public Transportation system';
 		case 'Roads and footpath':
           return 'Roads and Footpath';
-		case 'Local Market':
-          return 'Development of Local Market';
+		case 'Lake Improvement and Beautification':
+          return 'Lake Area Improvement and Beautification';
 		case 'School':
           return 'Enhance the School Infrastructure';
 		case 'Storm water drain':
           return 'Storm Water Drainage';
-		  case 'Open Space':
-          return 'Development of Open Spaces and Green Spaces';		
-		  case 'Street Light':
-          return 'Street Lights';
+		case 'Recreational activities':
+          return 'Development of Recreational Activities';
+		  	case 'Open Space':
+          return 'Developments of Open Spaces and Green Spaces';		
+		  case 'Building theatre':
+          return 'Building theatre (auditorium)';
         default:
           return '';
       }
