@@ -1,123 +1,721 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Registration</title>
-</head>
-<body>
-   
-    <header>
-        <h1>Global South Academic Conclave</h1>
-        <h2>WASH and Climate linkages</h2>
-    </header>
-    
-    <section>
-        <h3>Digital Registration</h3>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Pre-Budget Consultation </title>
+  
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+	  
+  <link 
+  rel="stylesheet" 
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+  />
+  <style>
+
+  
+  .givs-section {
+	align-items: center;
+      padding: 20px; 
+      border-radius: 0px; 
+      margin-bottom: 20px; 
+    }
+	
+    .question-section {
+      background-color: #f5f5f5; 
+      padding: 20px; 
+      border-radius: 0px; 
+      margin-bottom: 20px; 
+    }
+
+
+    #logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    #logo {
+      max-width: 100px; 
+      border-radius: 50%;
+      margin: 10px; 
+      overflow: hidden; 
+    }
+	  
+    body {
+      font-family: Arial, sans-serif;
+      margin: 5px;
+      text-align: left;
+    }
+
+    h1 {
+      color: #333;
+	  font-size: 8px;
+	  text-align: Left;
+    }
+	
+	h3 {
+      color: #333;
+	  text-align: left;
+    }
+
+
+	h4 {
+      color: #ccc;
+	  font-size: 4px;
+	  text-align: center;
+    }
+	
+	
+    label {
+      display: block;
+	  margin: 10px;
+    }
+
+    input[type="checkbox"] {
+      display: none;
+	   margin-left: 10px;
+    }
+
+    .option {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+	  background-color: #FBFCFC;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 15px;
+    }
+
+    .icon {
+      margin-right: 20px;
+      font-size: 24px;
+    }
+
+    .text {
+      font-size: 18px;
+    }
+
+    .option:hover {
+      background-color: #e6e6e6;
+    }
+
+
+    input[type="checkbox"]:checked + .option {
+      background-color: #00D1B2; /* Green background for selected option */
+      color: #fff; /* White text for better visibility */
+	  margin-left: 10px;
+    }
+
+    #slider-container {
+      margin: 10px;
+    }
+
+
+    #rating-value {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    #popup {
+      display: none;
+	  position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 40px;
+      background-color: #FFF;
+      z-index: 1000;
+      align-items: center;
+	  text-align: center;
+      border: 1px solid #ccc;
+      border-radius: 15px;
+    }
+
+    #overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+	
+	  ::placeholder {
+      color: #999; /* Change the color as desired */
+      font-style: italic; /* Add any desired font styles */
+	  word-wrap: break-word;  
+    }
+	
+	
+  </style>
+  </head>
+  <body>
+    <section class="hero is-primary is-bold">
+      <div class="hero-body">
+        <div class="container1">
+			  <div id="logo-container">
+			    <img id="logo" src="logo.jpg" alt="Logo">
+		    <div class="container1">
+				<h1 class="title"> Kulgaon Badlapur Municipal Council <br> कुळगाव बदलापूर नगरपरिषद  </h1>
+				<h3 class="label">Pre-Budget Consultation for FY 2024-25 <br> आर्थिक वर्ष 2024-25 च्या अर्थसंकल्पासाठी <br>कु. ब. न. प. चा नागरीकांशी संवाद </h3>
+		      </div>
+			</div>
+		</div>
     </section>
+	
+	
+    <form id="form" class="container m-4 pl-4" method="POST">
+      
 
-    <div id="videoContainer">
-        <video id="video" playsinline></video>
-        <i id="swapCameraBtn" class="fa-solid fa-camera-rotate"></i>
-        <button id="swapCameraBtn">Camera-rotate</button>
-        
-    </div>
+	  
+      <section class="question-section">
+	  <div class="field">
+        <label class="label">1. लिंग  [ Gender ]</label>
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="Gender" value="male" /> Male ( पुरुष )
+          </label>
+		  <br>
+          <label class="radio">
+            <input type="radio" name="Gender" value="female" /> Female ( स्त्री )
+          </label>
+		  <br>
+		  <label class="radio">
+            <input type="radio" name="Gender" value="others" /> Others ( इतर )
+          </label>
+        </div>
+      </div>
+	  </section>
+	  <br>
+	  
+	  <section class="question-section">
+	  	 <div class="field">
+        <label class="label">2. वय  [  Age ] </label>
+        <div class="control">
+          <input
+            class="input"
+            type="number"
+            placeholder="कृपया फक्त वर्षे वापरून तुमचे वय टाइप करा  ( Please enter your age using years only)"
+            name="Age"
+          />
+        </div>
+      </div>
+	  </section>
+ <br>
+	 
+	 
+	 <section class="question-section"> 
+	 <div class="field">
+        <label class="label">3. निवासी वार्ड क्रमांक  <br> Residential ward number  </label>
+        <div class="control">
+          <input
+            class="input"
+            type="number"
+            placeholder="कृपया तुमचा प्रभाग क्रमांक टाका  ( Please enter your ward number )"
+            name="WardNo"
+          />
+        </div>
+      </div>
+	  </section>
+ <br>
+	  
+	 <section class="question-section"> 
+      <div class="field">
+        <label class="label">4. कृपया तुमच्या शहरासाठी तुम्हाला हवे असलेले प्राधान्यक्रमानुसार कोणतेही 3 प्रकल्प निवडा <br> Please select any 3 projects based on priority that you want for your city</label>
 
-    <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+    <label>
+      <input type="checkbox" name="Projects2" class="Projects" value="Underground Sewer Network">
+      <div class="option">
+        <span class="icon"><i class="fas fa-ring"></i></span>
+        <span class="text">भूमिगत गटार <br> Underground Sewer Network </span>
+      </div>
+    </label>
+	
+			<label>
+      <input type="checkbox" name="Projects9" class="Projects" value="Storm water drain">
+      <div class="option">
+        <span class="icon"><i class="fas fa-circle"></i></span>
+        <span class="text"> पावसाळी पाणी निचरा <br> Storm Water Drainage </span>
+      </div>
+    </label>
+	
+	    <label>
+      <input type="checkbox" name="Projects3" class="Projects" value="SATIS Project">
+      <div class="option">
+        <span class="icon"><i class='fas fa-life-ring'></i></span>
+        <span class="text"> स्टेशन परिसर वाहतूक सुधारणा योजना<br>SATIS project: Station Area Traffic Improvement Scheme </span>
+      </div>
+    </label>
+
+
+
+	<label>
+      <input type="checkbox" name="Projects6" class="Projects" value="Lake Improvement and Beautification">
+      <div class="option">
+        <span class="icon"><i class="fas fa-water"></i></span>
+        <span class="text"> तलाव परिसर सुशोभीकरण <br>Lake Area Improvement and Beautification </span>
+      </div>
+    </label>
+	
+
+	
+		<label>
+      <input type="checkbox" name="Projects5" class="Projects" value="Roads and footpath">
+      <div class="option">
+        <span class="icon"><i class="fas fa-road"></i></span>
+        <span class="text"> रस्ते आणि पदपथ <br>Roads and Footpath </span>
+      </div>
+    </label>
+			 
+	<label>
+      <input type="checkbox" name="Projects8" class="Projects" value="Building theatre">
+      <div class="option">
+        <span class="icon"><i class="fas fa-theater-masks"></i></span>
+        <span class="text"> नाट्यगृह निर्माण  <br>Building theatre (auditorium) </span>
+      </div>
+    </label>
+	
+	
+		 
+	<label>
+      <input type="checkbox" name="Projects4" class="Projects" value="Public Transportation system">
+      <div class="option">
+        <span class="icon"><i class="fas fa-bus"></i></span>
+        <span class="text"> सार्वजनिक वाहतूक सेवा सुरू करणे  <br> Introduction of Public Transportation system  </span>
+      </div>
+    </label>
+			 		 
+	<label>
+      <input type="checkbox" name="Projects7" class="Projects" value="School">
+      <div class="option">
+        <span class="icon"><i class="fas fa-school"></i></span>
+        <span class="text"> शाळेच्या पायाभूत सुविधा वाढवणे  <br>Enhance the School Infrastructure</span>
+      </div>
+    </label>
+	
+		<label>
+      <input type="checkbox" name="Projects10" class="Projects" value="Recreational activities">
+      <div class="option">
+        <span class="icon"><i class="fas fa-tree"></i></span>
+        <span class="text"> मनोरंजक क्रियाकलापांचा विकास <br>Development of Recreational Activities </span>
+      </div>
+    </label>
+		 
+
+		<label>
+      <input type="checkbox" name="Projects1" class="Projects" value="Open Space">
+      <div class="option">
+        <span class="icon"><i class="fas fa-street-view"></i></span>
+        <span class="text"> ओपन स्पेस आणि ग्रीन स्पेसचा विकास  <br>Developments of Open Spaces and Green Spaces</span>
+		</div>
+		</label>	 
+
+		</div>
+		</section>	 
+ <br>
+
+	 <section class="question-section"> 
+		<div class="field">
+			<label class="label">5.  तुमची पहिली प्राथमिकता निवडा   <br> Please select your first priority?</label>
+			<div id="priority-options" >
+			</div>
+    	  
+			<label class="label">तुमची पहिली प्राथमिकतासाठी ठिकाण [Location for your first priority ] </label>
+			<div class="control">
+			<input
+            class="input"
+            type="text"
+            placeholder="ठिकाण इनपुट करा (Enter location )"
+            name="PriorityLocation1"
+			/>
+		  		   </div>
+		</div>
+		</section>
+ <br>
+
+
+	<section class="question-section"> 
+       <div class="field">
+        <label class="label">6. तुमची दुसरी प्राथमिकता प्रकल्प निवडा <br> Please select your second	 priority?</label>
+			<div id="second-priority-options">
+		
+			</div>
+				<label class="label">तुमची दुसरी प्राथमिकतासाठी ठिकाण [Location for your second priority ] </label>
+				<div class="control">
+				<input
+				class="input"
+				type="text"
+				placeholder="ठिकाण इनपुट करा (Enter location )"
+				name="PriorityLocation2"
+				/>
+			</div>
+		</div>
+		</section>
+ <br>
+ 
+	<section class="question-section"> 
+		<div class="field">
+ 	   <label class="label">7. तुमची तिसरी प्राथमिकतासाठी ठिकाण  <br> Location for third priority </label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            placeholder=" ठिकाण इनपुट करा (Enter location )"
+            name="PriorityLocation3"
+          />
+			</div>
+		</div>
+	</section>
+  <br>
+  
+  <section class="question-section"> 
+      <div class="field">
+        <label class="label">8. सूचना आणि प्रतिक्रिया <br> Suggestions and feedback</label>
+        <div class="control">
+          <textarea
+            class="textarea"
+            placeholder="कृपया आपल्या सूचना आणि प्रतिक्रिया द्या ( Please provide your suggestions and feedback)"
+            name="Notes"
+          ></textarea>
+        </div>
+      </div>
+	 </section>
+
+
+	<section class="givs-section">
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-primary" type="onclick" id="submit-button">
+            Submit
+          </button>
+        </div>
+        <div class="control">
+          <button class="button is-danger">Cancel</button>
+        </div>
+      </div>
+	   </section>
+	
+ <br> <br> <br> <br>
+	<div class="content has-text-left">
+
+		<p>
+		This form is designed by <strong> <a href="https://cwas.org.in/">Center for Water and Sanitation (CWAS) </a> </strong>  for <strong>Kulgaon Badlapur Municipal Council</strong> 
+		</p>
+	</div>
+<br>
+
+    </form>
+    <div id="popup"></div>
     
-    <script>    
-        const video = document.getElementById('video');
-        const swapCameraBtn = document.getElementById('swapCameraBtn');
-        const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbxRANWgQcdTjTwHQBrZy9vfAoIMIjhXEYijk6M-WklHkQjLp0-UVWuiBK_6rWEtdUR1/exec';
-        let scanner;
+	<div
+      id="message"
+      style="
+      display: none;
+	  position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 40px;
+      background-color: #FBFCFC;
+      z-index: 1000;
+      align-items: center;
+	  text-align: center;
+      border: 1px solid #ccc;
+      border-radius: 15px;
+      "
+    ></div>
+	
 
-        function startScanner(camera) {
-            // Initialize the camera
-            scanner = new Instascan.Scanner({ video: video });
+	
+	
+  <div id="overlay"></div>
+  
+  <script>
+    var travelCheckboxes = document.querySelectorAll('.Projects');
+    var ratingSlider = document.getElementById('rating-slider');
+    var ratingValue = document.getElementById('rating-value');
+    var priorityContainer = document.getElementById('priority-options');
+	var secondPriorityContainer = document.getElementById('second-priority-options');
+    var popup = document.getElementById('popup');
+    var overlay = document.getElementById('overlay');
+    var maxTravelSelections = 3;
+    var maxPrioritySelections = 1; // Since it's a checkbox with max 1 selection
 
-            scanner.addListener('scan', function (content) {
-                // Stop the camera
-                scanner.stop();
+    travelCheckboxes.forEach(function(checkbox) {
+      checkbox.addEventListener('change', function() {
+        var selectedTravelCheckboxes = document.querySelectorAll('.Projects:checked');
 
-                // Handle the scanned QR code content (in this case, displaying an alert)
-                alert('QR Code Content: ' + content);
-
-                // Call the recordCheckInOut function
-                recordCheckInOut(content);
-
-                // Wait for 2 seconds before starting the scanner again
-                setTimeout(function () {
-                    startScanner(camera);
-                }, 1000);
-            });
-
-            // Start scanning with the specified camera
-            scanner.start(camera);
+        if (selectedTravelCheckboxes.length > maxTravelSelections) {
+          showPopup1();
+          this.checked = false; // Uncheck the last checkbox if more than three are selected
+        } else {
+          updatePriorityOptions(selectedTravelCheckboxes);
         }
+      });
+    });
 
-        function recordCheckInOut(guestName) {
-            var checkType = "Registered";
+    ratingSlider.addEventListener('input', function() {
+      ratingValue.textContent = 'Rating: ' + this.value;
+    });
 
-            // Send data to the Google Apps Script web app
-            fetch(`${WEB_APP_URL}?guestName=${guestName}&checkType=${checkType}`)
-                .then(response => response.text())
-                .then(result => {
-                    console.log('Data added successfully:', result);
+    function updatePriorityOptions(selectedTravelCheckboxes) {
+      priorityContainer.innerHTML = ''; // Clear existing options
+	  secondPriorityContainer.innerHTML = ''; // Clear existing options
 
-                    // If needed, you can update the UI or perform other actions here
-                })
-                .catch(error => {
-                    console.error('Error adding data:', error);
-                });
-        }
+      selectedTravelCheckboxes.forEach(function(checkbox) {
+        var value = checkbox.value;
+        var iconClass = getIconClass(value);
+        var text = getText(value);
+		    var text2 = getText2(value);
+        var checkboxOption = document.createElement('label');
+        checkboxOption.innerHTML = `
+          <input type="checkbox" name="priority-option" class="priority-option" value="${value}">
+          <div class="option">
+            <span class="icon"><i class="${iconClass}"></i></span>
+            <span class="text">${text} <br> ${text2} </span>
+          </div>
+        `;
 
-        function swapCamera() {
-            // Stop the current scanner
-            scanner.stop();
+        priorityContainer.appendChild(checkboxOption);
+      });
 
-            // Get the list of available cameras
-            Instascan.Camera.getCameras().then(cameras => {
-                if (cameras.length > 0) {
-                    // Determine the camera to use based on screen width
-                    const useBackCamera = window.innerWidth < 600;
-                    const selectedCamera = useBackCamera ? cameras[1] : cameras[0];
+      var priorityCheckboxes = document.querySelectorAll('.priority-option');
 
-                    // Start scanning with the selected camera
-                    startScanner(selectedCamera);
-                } else {
-                    console.error('No cameras found.');
-                }
-            }).catch(err => {
-                console.error(err);
-            });
-        }
+      priorityCheckboxes.forEach(function(checkbox) {
+        checkbox.addEventListener('change', function() {
+          var selectedPriorityCheckboxes = document.querySelectorAll('.priority-option:checked');
 
-        // Add event listener to the swap camera button
-        swapCameraBtn.addEventListener('click', swapCamera);
-
-        // Get the list of available cameras and start scanning
-        Instascan.Camera.getCameras().then(cameras => {
-            if (cameras.length > 0) {
-                // Determine the camera to use based on screen width
-                const useBackCamera = window.innerWidth < 600;
-                const selectedCamera = useBackCamera ? cameras[1] : cameras[0];
-
-                // Start scanning with the selected camera
-                startScanner(selectedCamera);
-            } else {
-                console.error('No cameras found.');
-            }
-        }).catch(err => {
-            console.error(err);
+          if (selectedPriorityCheckboxes.length > maxPrioritySelections) {
+            showPopup2();
+            this.checked = false; // Uncheck the last checkbox if more than one is selected
+          } else {
+            updateSecondPriorityOptions(selectedPriorityCheckboxes);
+          }
         });
+      });
+    }
+	
+	function updateSecondPriorityOptions(selectedPriorityCheckboxes) {
+      var availableOptions = document.querySelectorAll('.priority-option:not(:checked)');
+      secondPriorityContainer.innerHTML = ''; // Clear existing options
+
+      availableOptions.forEach(function(checkbox) {
+        var value = checkbox.value;
+        var iconClass = getIconClass(value);
+        var text = getText(value);
+		var text2 = getText2(value);
+
+        var checkboxOption = document.createElement('label');
+        checkboxOption.innerHTML = `
+          <input type="checkbox" name="second-priority-option" class="second-priority-option" value="${value}">
+          <div class="option">
+            <span class="icon"><i class="${iconClass}"></i></span>
+            <span class="text">${text} <br> ${text2} </span>
+          </div>
+        `;
+
+        secondPriorityContainer.appendChild(checkboxOption);
+      });
+
+      var secondPriorityCheckboxes = document.querySelectorAll('.second-priority-option');
+
+      secondPriorityCheckboxes.forEach(function(checkbox) {
+        checkbox.addEventListener('change', function() {
+          var selectedSecondPriorityCheckboxes = document.querySelectorAll('.second-priority-option:checked');
+
+          if (selectedSecondPriorityCheckboxes.length > maxPrioritySelections) {
+            showPopup3('You can select only one option for the second priority.');
+            this.checked = false; // Uncheck the last checkbox if more than one is selected
+          }
+        });
+      });
+    }
+
+
+    function showPopup1() {
+      popup.innerHTML = '<p> <strong> You can not select more than three options </strong> <br> <br> </p><button onclick="closePopup1()">OK</button>';
+      popup.style.display = 'block';
+      overlay.style.display = 'block';
+    }
+
+    function closePopup1() {
+      popup.style.display = 'none';
+      overlay.style.display = 'none';
+    }
+
+    function showPopup2() {
+      popup.innerHTML = '<p> <strong>Only one option can be selected </strong> <br> <br> </p><button onclick="closePopup2()">OK</button>';
+      popup.style.display = 'block';
+      overlay.style.display = 'block';
+    }
+
+    function closePopup2() {
+      popup.style.display = 'none';
+      overlay.style.display = 'none';
+    }
+	
+	    function showPopup3() {
+      popup.innerHTML = '<p> <strong>Only one option can be selected </strong> <br> <br> </p><button onclick="closePopup3()">OK</button>';
+      popup.style.display = 'block';
+      overlay.style.display = 'block';
+    }
+
+    function closePopup3() {
+      popup.style.display = 'none';
+      overlay.style.display = 'none';
+    }
+	
+    function getIconClass(value) {
+      switch (value) {
+        case 'Underground Sewer Network':
+          return 'fas fa-ring';
+        case 'SATIS Project':
+          return 'fas fa-life-ring';
+	    case 'Public Transportation system':
+          return 'fas fa-bus';
+		case 'Roads and footpath':
+          return 'fas fa-road';
+		case 'Lake Improvement and Beautification':
+          return 'fas fa-water';
+		case 'School':
+          return 'fas fa-school';
+
+		case 'Storm water drain':
+          return 'fas fa-circle';
+		 case 'Open Space':
+          return 'fas fa-street-view';
+		case 'Building theatre':
+          return 'fas fa-theater-masks';
+		  
+	case 'Recreational activities':
+          return 'fas fa-tree';
+        default:
+          return '';
+      }
+    }
+
+    function getText(value) {
+      switch (value) {
+        case 'Underground Sewer Network':
+          return 'भूमिगत गटार';
+        case 'SATIS Project':
+          return 'स्टेशन परिसर वाहतूक सुधारणा योजना';
+		case 'Public Transportation system':
+          return 'सार्वजनिक वाहतूक सेवा सुरू करणे';
+		case 'Roads and footpath':
+          return 'रस्ते आणि पदपथ ';
+		case 'Lake Improvement and Beautification':
+          return 'तलाव परिसर सुशोभीकरण';
+		case 'School':
+          return 'शाळेच्या पायाभूत सुविधा वाढवणे ';
+		case 'Storm water drain':
+          return 'पावसाळी पाणी निचरा';
+		case 'Recreational activities':
+          return 'मनोरंजक क्रियाकलापांचा विकास';
+		  	case 'Open Space':
+          return 'ओपन स्पेस आणि ग्रीन स्पेसचा विकास ';		
+		  case 'Building theatre':
+          return 'नाट्यगृह निर्माण ';
+        default:
+          return '';
+      }
+    }
+	
+	function getText2(value) {
+      switch (value) {
+        case 'Underground Sewer Network':
+          return 'Underground Sewer Network';
+        case 'SATIS Project':
+          return 'SATIS project: Station Area Traffic Improvement Scheme';
+		case 'Public Transportation system':
+          return 'Introduction of Public Transportation system';
+		case 'Roads and footpath':
+          return 'Roads and Footpath';
+		case 'Lake Improvement and Beautification':
+          return 'Lake Area Improvement and Beautification';
+		case 'School':
+          return 'Enhance the School Infrastructure';
+		case 'Storm water drain':
+          return 'Storm Water Drainage';
+		case 'Recreational activities':
+          return 'Development of Recreational Activities';
+		  	case 'Open Space':
+          return 'Developments of Open Spaces and Green Spaces';		
+		  case 'Building theatre':
+          return 'Building theatre (auditorium)';
+        default:
+          return '';
+      }
+    }
+  </script>
+
+    <script>
+      document.getElementById("submit-button").addEventListener("click", function (e) {
+        e.preventDefault(); // Prevent the default form submission
+        document.getElementById("message").textContent = "Submitting..";
+        document.getElementById("message").style.display = "block";
+		document.getElementById("submit-button").disabled = true;
+
+        // Collect the form data
+        var formData = new FormData(document.getElementById("form"));
+        var keyValuePairs = [];
+        for (var pair of formData.entries()) {
+          keyValuePairs.push(pair[0] + "=" + pair[1]);
+        }
+
+        var formDataString = keyValuePairs.join("&");
+
+        // Send a POST request to your Google Apps Script
+        fetch(
+          "https://script.google.com/macros/s/AKfycbz-seAnzLsONf0e17RFtV_zsIhcjpRF7XZ2A-IMJzgPjluNiO2Dr_7eh_wwP1DJwJM/exec",
+          {
+            redirect: "follow",
+            method: "POST",
+            body: formDataString,
+            headers: {
+              "Content-Type": "text/plain;charset=utf-8",
+            },
+          }
+        )
+          .then(function (response) {
+            // Check if the request was successful
+            if (response) {
+              return response; // Assuming your script returns JSON response
+            } else {
+              throw new Error("Failed to submit the form.");
+            }
+          })
+          .then(function (data) {
+            // Display a success message
+            document.getElementById("message").textContent =
+              "Data submitted successfully!";
+            document.getElementById("message").style.display = "block";
+            document.getElementById("message").style.backgroundColor = "green";
+            document.getElementById("message").style.color = "beige";
+            document.getElementById("submit-button").disabled = false;
+            document.getElementById("form").reset();
+
+            setTimeout(function () {
+              document.getElementById("message").textContent = "";
+              document.getElementById("message").style.display = "none";
+            }, 2600);
+          })
+          .catch(function (error) {
+            // Handle errors, you can display an error message here
+            console.error(error);
+            document.getElementById("message").textContent =
+              "An error occurred while submitting the form.";
+            document.getElementById("message").style.display = "block";
+          });
+      });
     </script>
-
-    <footer>
-        <p>Design by Givs01 | Copyrights &copy; - Center for Water and Sanitation, All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
-    <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
-</body>
+	
+  </body>
 </html>
